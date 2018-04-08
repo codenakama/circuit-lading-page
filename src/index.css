@@ -139,6 +139,8 @@ body {
 	font: 100%/1.618 sans-serif;
 }
 
-a {
+a,
+a:visited {
 	text-decoration: none;
+	color: inherit;
 }

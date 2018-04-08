@@ -20,6 +20,8 @@ const FormModal = ({ isOpen, handleCloseModal, ...props }) => {
 	return (
 		<ReactModal
 			isOpen={isOpen}
+			shouldCloseOnOverlayClick
+			onRequestClose={handleCloseModal}
 			contentLabel="Sing up for early access"
 			style={{
 				overlay: {
