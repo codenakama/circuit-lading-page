@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
 	border: 1px solid #b5bac6;
+	font-size: 1em;
 	padding: 0.5em 1em;
 	color: #fff;
 	background-color: ${props => (props.solid ? "#b5bac6" : null)};
@@ -14,7 +15,16 @@ const StyledButton = styled.a`
 	}
 `;
 
-const Button = ({ children, ...props }) => {
+const StyledButtonLink = StyledButton.withComponent("a");
+
+const Button = ({ children, href, ...props }) => {
+	if (href) {
+		return (
+			<StyledButtonLink href={href} {...props}>
+				{children}
+			</StyledButtonLink>
+		);
+	}
 	return <StyledButton {...props}>{children}</StyledButton>;
 };
 

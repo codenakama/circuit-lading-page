@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import { Title, SubTitle, Caption } from "../components/Typography";
 import Container from "../components/Container";
 import Button from "../components/Button";
+import FormModal from "../components/FormModal";
 
 const Line = styled.div`
 	border: 6px solid #b5bac6;
@@ -14,19 +15,35 @@ const Line = styled.div`
 const BoxLeft = styled(Box)`
 	background: #fdbb9e;
 	padding: 2em;
-	height: 400px;
+	height: 480px;
 `;
 
 const BoxRight = styled(Box)`
 	background: url(images/push.jpg) no-repeat center center;
 	background-size: cover;
-	height: 400px;
+	height: 480px;
 `;
 
 class HomeScreen extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			showModal: false
+		};
+	}
+
+	handleCloseModal = () => {
+		this.setState({ showModal: false });
+	};
+
+	handleOpenModal = e => {
+		e.preventDefault();
+		this.setState({ showModal: true });
+	};
+
 	render() {
 		return (
-			<Layout>
+			<Layout handleOpenModal={this.handleOpenModal}>
 				<Container>
 					<Box mb={6}>
 						<Box mb={3}>
@@ -46,8 +63,8 @@ class HomeScreen extends Component {
 						</Box>
 					</Box>
 				</Container>
-				<Flex>
-					<BoxLeft w={1 / 2}>
+				<Flex wrap>
+					<BoxLeft w={[1, 1 / 2, 1 / 2]}>
 						<Box mb={3}>
 							<Title>Focus on your device</Title>
 						</Box>
@@ -59,10 +76,16 @@ class HomeScreen extends Component {
 								power user and ease your music making workflow.
 							</p>
 						</Box>
-						<Button solid>SIGN UP FOR EARLY ACCESS</Button>
+						<Button solid onClick={this.handleOpenModal}>
+							SIGN UP FOR EARLY ACCESS
+						</Button>
 					</BoxLeft>
-					<BoxRight w={1 / 2} />
+					<BoxRight w={[1, 1 / 2, 1 / 2]} />
 				</Flex>
+				<FormModal
+					isOpen={this.state.showModal}
+					handleCloseModal={this.handleCloseModal}
+				/>
 			</Layout>
 		);
 	}

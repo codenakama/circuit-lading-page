@@ -13,13 +13,13 @@ const Header = styled.header`
 	align-items: center;
 `;
 
-const Layout = ({ children, ...props }) => {
+const Layout = ({ children, handleOpenModal, ...props }) => {
 	return (
 		<Fragment>
 			<Container>
 				<Header>
 					<Jumbo color="#B5BAC6">Circuit</Jumbo>
-					<Button solid href="#">
+					<Button solid onClick={handleOpenModal}>
 						SIGN UP FOR EARLY ACCESS
 					</Button>
 				</Header>
