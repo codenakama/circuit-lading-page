@@ -49,7 +49,7 @@ class HomeScreen extends Component {
 						<Box mb={3}>
 							<Title>Learn Music Production</Title>
 						</Box>
-						<Box mb={3} w={1 / 2}>
+						<Box mb={3} w={[1, 1 / 2, 1 / 2]}>
 							<Box mb={3}>
 								<SubTitle color="#B5BAC6">With your Ableton Push</SubTitle>
 							</Box>
