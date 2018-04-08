@@ -73,7 +73,7 @@ class HomeScreen extends Component {
 								With exercises designed to interact natively with the devices
 								you already own, Circuit helps you practise, learn music
 								concepts and how to operate your midi instruments to become a
-								power user and ease your music making workflow.
+								power user and ease your music production workflow.
 							</p>
 						</Box>
 						<Button solid onClick={this.handleOpenModal}>
