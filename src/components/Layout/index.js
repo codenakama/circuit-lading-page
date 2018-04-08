@@ -42,7 +42,7 @@ const Layout = ({ children, handleOpenModal, ...props }) => {
 					<a href="https://www.instagram.com/iamricardo_o/" target="_blank">
 						<i class="fab fa-instagram fa-2x" />
 					</a>
-					<a href="https://twitter.com/codenakama">
+					<a href="https://twitter.com/codenakama" target="_blank">
 						<i class="fab fa-twitter-square fa-2x" />
 					</a>
 					<Flex align="center">
