@@ -1,10 +1,9 @@
+import { Flex } from "grid-styled";
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
+import Button from "../Button";
 import Container from "../Container";
 import { Jumbo } from "../Typography";
-import Button from "../Button";
-import { Flex, Box } from "grid-styled";
 
 const Header = styled.header`
 	margin-top: 2em;
@@ -30,7 +29,7 @@ const Layout = ({ children, handleOpenModal, ...props }) => {
 		<Fragment>
 			<Container>
 				<Header>
-					<Jumbo color="#B5BAC6">Circuit</Jumbo>
+					<Jumbo color="#FF9151">Circuit</Jumbo>
 					<Button solid onClick={handleOpenModal}>
 						SIGN UP FOR EARLY ACCESS
 					</Button>
