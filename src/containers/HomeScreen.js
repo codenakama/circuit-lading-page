@@ -58,23 +58,37 @@ class HomeScreen extends Component {
     return (
       <Layout handleOpenModal={this.handleOpenModal}>
         <Container>
-          <Box mb={6}>
-            <Box mb={3}>
-              <Title>Learn Music Production</Title>
-            </Box>
-            <Box mb={3} w={[1, 1 / 2, 1 / 2]}>
+          <Flex wrap>
+            <Box mb={6} w={[1, 1, 1 / 2]} pr={[0, 4]} mb={3}>
+              <Box>
+                <Title>Learn Music Production</Title>
+              </Box>
               <Box mb={3}>
-                <SubTitle color="#B5BAC6">With your Ableton Push</SubTitle>
+                <Box mb={3}>
+                  <SubTitle color="#B5BAC6">With your Ableton Push</SubTitle>
+                </Box>
+                <Box mb={2}>
+                  <Line />
+                </Box>
+                <Caption>
+                  **Support for other devices to be added in future updates -
+                  e.g. MPC, Maschine, Novation Circuit.
+                </Caption>
               </Box>
-              <Box mb={2}>
-                <Line />
-              </Box>
-              <Caption>
-                **Support for other devices to be added in future updates - e.g.
-                MPC, Maschine, Novation Circuit.
-              </Caption>
             </Box>
-          </Box>
+            <Box w={[1, 1, 1 / 2]} mb={3}>
+              <Flex justify="center">
+                <iframe
+                  src="https://giphy.com/embed/20Bv2xvQHEnw9IzCdJ"
+                  width="280"
+                  height="170"
+                  frameBorder="0"
+                  class="giphy-embed"
+                  allowFullScreen
+                />
+              </Flex>
+            </Box>
+          </Flex>
         </Container>
         <Flex wrap>
           <BoxLeft w={[1, 1 / 2, 1 / 2]}>
