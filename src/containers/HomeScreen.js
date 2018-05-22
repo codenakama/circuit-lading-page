@@ -85,18 +85,6 @@ class HomeScreen extends Component {
                 </Caption>
               </Box>
             </Box>
-            <Box w={[1, 1, 1 / 2]} mb={3}>
-              <Flex justify="center">
-                <iframe
-                  src="https://giphy.com/embed/20Bv2xvQHEnw9IzCdJ"
-                  width="280"
-                  height="170"
-                  frameBorder="0"
-                  class="giphy-embed"
-                  allowFullScreen
-                />
-              </Flex>
-            </Box>
           </Flex>
         </Container>
         <Flex wrap>
