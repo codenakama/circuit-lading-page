@@ -24,6 +24,15 @@ const BoxRight = styled(Box)`
   height: 480px;
 `;
 
+const StepsSection = styled.section`
+  background-color: #d0e2d4;
+  padding: 2em;
+`;
+
+const StepImage = styled.img`
+  display: inline-block;
+`;
+
 class HomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -113,6 +122,36 @@ class HomeScreen extends Component {
           </BoxLeft>
           <BoxRight w={[1, 1 / 2, 1 / 2]} />
         </Flex>
+        <StepsSection>
+          <Flex justify="center" mb={5}>
+            <Title>Start learning in a few simple steps</Title>
+          </Flex>
+          <Flex justify="space-around" mb={5} flexWrap>
+            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]} mb={[3, 0]}>
+              <Box mb={3}>
+                <p>Go to</p>
+              </Box>
+              <StepImage src="/images/laptop.svg" />
+            </Box>
+            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]} mb={[3, 0]}>
+              <Box mb={3}>
+                <p>Plug Your Ableton Push</p>
+              </Box>
+              <StepImage src="/images/push.svg" />
+            </Box>
+            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]}>
+              <Box mb={3}>
+                <p>You are ready to start learning 🚀</p>
+              </Box>
+              <StepImage src="/images/preview.gif" />
+            </Box>
+          </Flex>
+          <Flex justify="center">
+            <Button solid onClick={this.handleOpenModal}>
+              SIGN UP FOR EARLY ACCESS
+            </Button>
+          </Flex>
+        </StepsSection>
         <FormModal
           isOpen={this.state.showModal}
           handleCloseModal={this.handleCloseModal}

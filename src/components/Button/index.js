@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-	border: 1px solid #b5bac6;
+	border: none;
 	font-size: 1em;
 	padding: 0.5em 1em;
 	color: #fff;
-	background-color: ${props => (props.solid ? "#b5bac6" : null)};
+	background-color: ${props => (props.solid ? "#FF9151" : null)};
 	opacity: 0.8;
 	transition: opacity 0.2s ease-in;
 	:hover {
