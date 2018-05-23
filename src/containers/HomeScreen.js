@@ -115,23 +115,33 @@ class HomeScreen extends Component {
             <Title>Start learning in a few simple steps</Title>
           </Flex>
           <Flex justify="space-around" mb={5} flexWrap>
-            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]} mb={[3, 0]}>
-              <Box mb={3}>
-                <p>Go to</p>
-              </Box>
-              <StepImage src="/images/laptop.svg" />
+            <Box w={[1, 1, 1 / 3]} mb={[3, 0]}>
+              <Flex flexDirection="column" alignItems="center">
+                <Box mb={3}>
+                  <p>Go to</p>
+                </Box>
+                <StepImage src="/images/laptop.svg" />
+              </Flex>
             </Box>
-            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]} mb={[3, 0]}>
-              <Box mb={3}>
-                <p>Plug Your Ableton Push</p>
-              </Box>
-              <StepImage src="/images/push.svg" />
+            <Box
+              style={{ textAlign: "center" }}
+              w={[1, 1, 1, 1 / 3]}
+              mb={[3, 0]}
+            >
+              <Flex flexDirection="column" alignItems="center">
+                <Box mb={3}>
+                  <p>Plug Your Ableton Push</p>
+                </Box>
+                <StepImage src="/images/push.svg" />
+              </Flex>
             </Box>
-            <Box style={{ textAlign: "center" }} w={[1, 1 / 3]}>
-              <Box mb={3}>
-                <p>You are ready to start learning 🚀</p>
-              </Box>
-              <StepImage src="/images/preview.gif" />
+            <Box style={{ textAlign: "center" }} w={[1, 1, 1, 1 / 3]}>
+              <Flex flexDirection="column" alignItems="center">
+                <Box mb={3}>
+                  <p>You are ready to start learning 🚀</p>
+                </Box>
+                <StepImage src="/images/preview.gif" />
+              </Flex>
             </Box>
           </Flex>
           <Flex justify="center">
